@@ -1,26 +1,312 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VQT-37-oJm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--設定-->
+        <scene sceneID="T7U-Bh-lSv">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wc3-Au-dzi" customClass="settingViewController" customModule="Day_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="i5o-mW-HAC"/>
+                        <viewControllerLayoutGuide type="bottom" id="CYK-ez-JvC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8JT-cq-qLN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MAB-y7-ggM">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="設定" id="Thh-Zz-Sx1"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQc-lN-NvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2514" y="724"/>
+        </scene>
+        <!--スケジュール管理-->
+        <scene sceneID="p4G-M3-27p">
+            <objects>
+                <viewController id="ImL-62-Xp3" customClass="scheduleViewController" customModule="Day_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OVm-3s-KLv"/>
+                        <viewControllerLayoutGuide type="bottom" id="8hi-Ya-2rs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aii-15-0go">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="スケジュール管理" id="wul-bN-nj2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eIg-N4-l2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3032.8000000000002" y="-290.10494752623691"/>
+        </scene>
+        <!--ホーム-->
+        <scene sceneID="OmP-mj-owp">
+            <objects>
+                <viewController id="frv-wr-pkx" customClass="homeViewController" customModule="Day_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y2N-wT-AiM"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Dc-AV-jvA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TSg-ZT-3VY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxY-t5-jvF">
+                                <rect key="frame" x="37" y="193" width="300" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="8C3-QS-aOY"/>
+                                    <constraint firstAttribute="width" constant="300" id="Cf5-a6-Z9c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="仕事" backgroundImage="work">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ab7-nh-hPf">
+                                <rect key="frame" x="37" y="292" width="300" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="Ks1-j1-Wol"/>
+                                    <constraint firstAttribute="width" constant="300" id="mqb-rA-a8L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="運動" backgroundImage="exercise">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEt-Me-TMk">
+                                <rect key="frame" x="37" y="391" width="300" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="oCF-1G-0Ma"/>
+                                    <constraint firstAttribute="width" constant="300" id="xla-Jo-8GI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="食事" backgroundImage="meal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vq-S4-HVL">
+                                <rect key="frame" x="37" y="490" width="300" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="WC9-Xs-ryP"/>
+                                    <constraint firstAttribute="height" constant="84" id="eXR-Zn-6xr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="睡眠" backgroundImage="sleep">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbF-7P-kOf">
+                                <rect key="frame" x="37" y="94" width="300" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="AwZ-c8-Ei3"/>
+                                    <constraint firstAttribute="width" constant="300" id="UI8-kw-2bf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="勉強" backgroundImage="study">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ab7-nh-hPf" firstAttribute="top" secondItem="pxY-t5-jvF" secondAttribute="bottom" constant="15" id="1yP-df-ddS"/>
+                            <constraint firstItem="mbF-7P-kOf" firstAttribute="top" secondItem="Y2N-wT-AiM" secondAttribute="bottom" constant="30" id="3F0-ym-Q6u"/>
+                            <constraint firstItem="Ab7-nh-hPf" firstAttribute="centerX" secondItem="TSg-ZT-3VY" secondAttribute="centerX" id="4R3-tX-Fx2"/>
+                            <constraint firstItem="4vq-S4-HVL" firstAttribute="top" secondItem="DEt-Me-TMk" secondAttribute="bottom" constant="15" id="82C-FV-n5B"/>
+                            <constraint firstItem="pxY-t5-jvF" firstAttribute="centerX" secondItem="TSg-ZT-3VY" secondAttribute="centerX" id="DKx-4z-zdY"/>
+                            <constraint firstItem="pxY-t5-jvF" firstAttribute="top" secondItem="mbF-7P-kOf" secondAttribute="bottom" constant="15" id="Eh9-Fl-gYl"/>
+                            <constraint firstItem="DEt-Me-TMk" firstAttribute="top" secondItem="Ab7-nh-hPf" secondAttribute="bottom" constant="15" id="Nv1-PK-JXW"/>
+                            <constraint firstItem="DEt-Me-TMk" firstAttribute="centerX" secondItem="TSg-ZT-3VY" secondAttribute="centerX" id="XaD-JV-0tc"/>
+                            <constraint firstItem="mbF-7P-kOf" firstAttribute="centerX" secondItem="TSg-ZT-3VY" secondAttribute="centerX" id="bj7-ZH-LUb"/>
+                            <constraint firstItem="4vq-S4-HVL" firstAttribute="centerX" secondItem="TSg-ZT-3VY" secondAttribute="centerX" id="cUJ-cB-0sC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ホーム" id="x1b-ls-dGR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9S3-4T-tLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639" y="-268"/>
+        </scene>
+        <!--グラフ-->
+        <scene sceneID="6u0-dS-obn">
+            <objects>
+                <viewController id="UfU-by-247" customClass="graphViewController" customModule="Day_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PQM-Ym-6ZF"/>
+                        <viewControllerLayoutGuide type="bottom" id="lh2-i5-hfc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eDf-dS-Tbr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="グラフ" id="Lrh-dX-d3Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifA-y3-w6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537" y="-985"/>
+        </scene>
+        <!--過去のデータ-->
+        <scene sceneID="ySm-bR-Fbj">
+            <objects>
+                <viewController id="am7-cK-ouj" customClass="dataViewController" customModule="Day_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lZ1-BJ-tIR"/>
+                        <viewControllerLayoutGuide type="bottom" id="TYe-8L-KZc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BHk-Mn-bki">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="過去のデータ" id="akT-aF-rD2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGA-W7-z7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-737" y="714"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LSA-ua-JnZ">
+            <objects>
+                <tabBarController id="VQT-37-oJm" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="9Bm-up-Pxf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="P30-K2-dKp" kind="relationship" relationship="viewControllers" id="F8S-7j-5OI"/>
+                        <segue destination="Afi-wG-s5E" kind="relationship" relationship="viewControllers" id="QUP-AW-EuF"/>
+                        <segue destination="TDD-Fd-Q8X" kind="relationship" relationship="viewControllers" id="nlP-zn-hDA"/>
+                        <segue destination="KgY-mq-7RX" kind="relationship" relationship="viewControllers" id="sqW-u8-1ZP"/>
+                        <segue destination="ndQ-Kc-rlv" kind="relationship" relationship="viewControllers" id="29E-hc-Qy0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fu-KN-N1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807.20000000000005" y="52.623688155922046"/>
+        </scene>
+        <!--setting-->
+        <scene sceneID="g1Z-Qy-xmH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ndQ-Kc-rlv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="5" title="setting" image="setting" selectedImage="setting" id="D9k-hQ-2Qr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UAl-aH-uoY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wc3-Au-dzi" kind="relationship" relationship="rootViewController" id="OZ1-7i-krb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cg5-BK-y5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1710" y="714"/>
+        </scene>
+        <!--home-->
+        <scene sceneID="Ne0-gT-4B0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P30-K2-dKp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="home" image="home" selectedImage="home" id="Esq-h8-JYI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zxn-6L-dtt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="frv-wr-pkx" kind="relationship" relationship="rootViewController" id="VvE-6h-QGs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fG6-cQ-uWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42" y="-269"/>
+        </scene>
+        <!--graph-->
+        <scene sceneID="cTb-be-IAP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Afi-wG-s5E" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="2" title="graph" image="graph" selectedImage="graph" id="Zf7-6a-4Ak"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8uN-xe-Esr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UfU-by-247" kind="relationship" relationship="rootViewController" id="sRP-qF-5JY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CiH-7P-o1R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807.20000000000005" y="-734.48275862068976"/>
+        </scene>
+        <!--schedule-->
+        <scene sceneID="Cj8-79-nqC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TDD-Fd-Q8X" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="3" title="schedule" image="schedule" selectedImage="schedule" id="iut-gU-ODM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1x5-IO-1aK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ImL-62-Xp3" kind="relationship" relationship="rootViewController" id="iF7-xt-80G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W0i-kq-8Wp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2093.5999999999999" y="-290.10494752623691"/>
+        </scene>
+        <!--data-->
+        <scene sceneID="fs6-JM-tA5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KgY-mq-7RX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="4" title="data" image="data" selectedImage="data" id="aac-h4-AJw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HAh-58-Y4B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="am7-cK-ouj" kind="relationship" relationship="rootViewController" id="Epe-OY-c3L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XJF-EZ-raj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.80000000000000004" y="713.79310344827593"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="data" width="29" height="29"/>
+        <image name="exercise" width="300" height="84"/>
+        <image name="graph" width="29" height="29"/>
+        <image name="home" width="29" height="29"/>
+        <image name="meal" width="300" height="84"/>
+        <image name="schedule" width="29" height="29"/>
+        <image name="setting" width="29" height="29"/>
+        <image name="sleep" width="300" height="84"/>
+        <image name="study" width="300" height="84"/>
+        <image name="work" width="300" height="84"/>
+    </resources>
 </document>
