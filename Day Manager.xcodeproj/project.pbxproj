@@ -20,6 +20,8 @@
 		86C11A801F4EA9C50046A912 /* scheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C11A7F1F4EA9C50046A912 /* scheduleViewController.swift */; };
 		86C11A821F4EA9CF0046A912 /* dataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C11A811F4EA9CF0046A912 /* dataViewController.swift */; };
 		86C11A841F4EA9D90046A912 /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C11A831F4EA9D90046A912 /* settingViewController.swift */; };
+		86C11A861F52422E0046A912 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C11A851F52422E0046A912 /* Task.swift */; };
+		86C11A881F5248EB0046A912 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C11A871F5248EB0046A912 /* InputViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		86C11A7F1F4EA9C50046A912 /* scheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scheduleViewController.swift; sourceTree = "<group>"; };
 		86C11A811F4EA9CF0046A912 /* dataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataViewController.swift; sourceTree = "<group>"; };
 		86C11A831F4EA9D90046A912 /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingViewController.swift; sourceTree = "<group>"; };
+		86C11A851F52422E0046A912 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		86C11A871F5248EB0046A912 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		B2CC702BEDA3692BB88380A2 /* Pods-Day Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day Manager.release.xcconfig"; path = "Pods/Target Support Files/Pods-Day Manager/Pods-Day Manager.release.xcconfig"; sourceTree = "<group>"; };
 		E42D105219257930890E8361 /* Pods-Day Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Day Manager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Day Manager/Pods-Day Manager.debug.xcconfig"; sourceTree = "<group>"; };
 		FC0CDDD0B4FD6A233333DBB5 /* Pods_Day_Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Day_Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,7 +129,9 @@
 				86C11A4D1F4DB8FB0046A912 /* AppDelegate.swift */,
 				86C11A4F1F4DB8FB0046A912 /* ViewController.swift */,
 				86C11A511F4DB8FB0046A912 /* Main.storyboard */,
+				86C11A851F52422E0046A912 /* Task.swift */,
 				86C11A7B1F4EA9A00046A912 /* homeViewController.swift */,
+				86C11A871F5248EB0046A912 /* InputViewController.swift */,
 				86C11A7D1F4EA9AC0046A912 /* graphViewController.swift */,
 				86C11A7F1F4EA9C50046A912 /* scheduleViewController.swift */,
 				86C11A811F4EA9CF0046A912 /* dataViewController.swift */,
@@ -349,6 +355,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C11A881F5248EB0046A912 /* InputViewController.swift in Sources */,
+				86C11A861F52422E0046A912 /* Task.swift in Sources */,
 				86C11A821F4EA9CF0046A912 /* dataViewController.swift in Sources */,
 				86C11A501F4DB8FB0046A912 /* ViewController.swift in Sources */,
 				86C11A7E1F4EA9AC0046A912 /* graphViewController.swift in Sources */,
@@ -602,6 +610,7 @@
 				86C11A741F4DB8FB0046A912 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86C11A751F4DB8FB0046A912 /* Build configuration list for PBXNativeTarget "Day ManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -610,6 +619,7 @@
 				86C11A771F4DB8FB0046A912 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86C11A781F4DB8FB0046A912 /* Build configuration list for PBXNativeTarget "Day ManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -618,6 +628,7 @@
 				86C11A7A1F4DB8FB0046A912 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
